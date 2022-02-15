@@ -1,3 +1,7 @@
+/*************
+Header
+*************/
+
 .navContainer{
   background-color: #FFFFCC;
   border: 1px #FFF8C6 solid;
@@ -25,26 +29,127 @@
   display: inline;
 }
 
-.nav-li{
-  float: right;
-}
-
-.home-grid{
-  display: flex;
-  flex-flow: column;
-  padding: 2vh 15vw;
-}
-
 .menuButton{
   background-color: Beige;
   border: 1px solid #FFDFDD;
   border-radius: 20%;
   float: right;  
-  margin: 1vh; 
+  margin: 1.2vh; 
   padding: 0.8vh 2vh; 
+}
+
+.menuButton:hover{  
+  border: 3px solid #F2BB66;
 }
 
 .header{  
   background-color: Beige;
-  height: 9vh;
+  height: 10vh;  
+}
+
+/***************
+main page
+***************/
+.homeGrid{
+  display: flex;
+  flex-flow: column;
+  margin: 5px;
+  padding: 0 5vw;
+}
+
+.homeTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.homeTitleWrapper{
+  display: inline-flex;
+}
+
+.homeTitleWrapper h1{
+  display: inline;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.homeTitleWrapper ul{
+  margin-left: 2vw;
+  padding: 0; 
+  margin: 3.5vh 1px 1px 3vw;
+  height: 42px;
+  overflow: hidden;
+}
+
+.homeTitleWrapper ul li{
+  color: #FFA62F;
+  list-style: none;
+  font-size: xx-large;
+  font-weight: 700;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide{  
+  100%{
+    top: -175px;
+  }
+}
+
+.homeTitleWrapper ul li span{
+  position: relative;
+}
+
+.homeTitleWrapper ul li span::after{
+  background-color: #FBF6D9;
+  border-left: 2px solid #FFA62F;
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing{
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+.sectionList{
+  color: #FFA62F;
+  list-style-type: none;
+  padding-left: 3vw;
+}
+
+.sectionParagraph{
+  font-family: Roboto;
+  font-size: 1.5rem;
+  line-height: 5vh;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.sectionTitle{
+  text-decoration: underline #FFA62F dashed 4px;
+}
+
+/***********
+Footer
+***********/
+.footerContainer{
+  font-weight: 800;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.footerNav li{
+  display: inline;
+  margin: 5vw;
 }
