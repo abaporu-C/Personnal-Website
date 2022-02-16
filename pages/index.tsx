@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 const Home: NextPage = () => {
 
   return (
-    <>
+    <main>
     <div className={styles.homeTitle}>
       <div className={styles.homeTitleWrapper}>
         <h1>I&#39;m a</h1>
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
 
        </section>
      </div> 
-    </>
+    </main>
   )
 }
 
