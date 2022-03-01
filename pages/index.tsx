@@ -1,22 +1,49 @@
 import type { NextPage } from 'next'
+/* import loadPosts from '../lib/fetch-posts'
+import { useEffect } from 'react' */
+import Card from '../components/Card'
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+type Posts = {
+
+}
+
+type Works = {
+  
+}
+
+interface Props{
+  posts: Array<Posts>,
+  works: Array<Works>
+} 
+
+const Home: NextPage<Props> = ({posts}) => {
+
+  //fields
+  const date = new Date();
+
+  /* useEffect(() => {
+    async function getData(){
+      await loadPosts();
+    }
+      getData();
+  },[]) */
 
   return (
     <main>
-    <div className={styles.homeTitle}>
-      <div className={styles.homeTitleWrapper}>
-        <h1>I&#39;m a</h1>
-        <ul>
-          <li><span>Developer</span></li>
-          <li><span>Designer</span></li>
-          <li><span>Freelancer</span></li>
-        </ul>
-      </div>
-    </div>
+    
      <div className={styles.homeGrid}>
        <section>
+      <div className={styles.homeTitle}>
+        <div className={styles.homeTitleWrapper}>
+          <h1>I&#39;m a</h1>
+          <ul>
+            <li><span>Developer</span></li>
+            <li><span>Designer</span></li>
+            <li><span>Freelancer</span></li>
+          </ul>
+        </div>
+      </div>
         <div>          
           <h2 className={styles.sectionTitle}>About me:</h2>
           <p className={styles.sectionParagraph}>Vinicius is a freelance full-stack developer based in Ontario with a passion for building safe and efficient
@@ -68,15 +95,24 @@ const Home: NextPage = () => {
           </ul>
         </div>
        </section>
-       <section className={styles["post-section"]}>
-
-       </section>
-       <section className={styles["proj-section"]}>
-
-       </section>
+       <fieldset className={styles.sectionShowcase}>
+         <legend style={{fontSize: "1.5em", fontWeight: "700"}}>Blog</legend>
+        <section>
+          <Card date={date} id={1} title="no title yet" content='Veniam enim proident ullamco tempor cupidatat velit.' image="/../public/georgeIceCream.jpg" author="vinny"/>
+        </section>
+       </fieldset>
+       <fieldset className={styles.sectionShowcase}>
+         <legend style={{fontSize: "1.5em", fontWeight: "700"}}>Works</legend>
+        <section>
+          <Card date={date} id={1} title="work of art" content='Et id excepteur aliqua occaecat consectetur laborum ea minim id nisi laboris qui.' image="/../public/georgeIceCream.jpg" author="vinny"/>
+        </section>
+       </fieldset>
      </div> 
     </main>
   )
 }
+
+
+
 
 export default Home
