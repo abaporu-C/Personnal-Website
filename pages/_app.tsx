@@ -1,13 +1,11 @@
-import Layout from '../components/Layout'
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+// pages/_app.tsx
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return(
+import Layout from '../components/layout'
+
+export default function MyApp({ Component, pageProps }) {
+  return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
-  )  
+  )
 }
-
-export default MyApp
