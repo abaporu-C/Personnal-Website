@@ -15,8 +15,9 @@ function Header() {
 
   return (
     <>
-      <header>
-        <nav className="flex flex-wrap
+      <header className="mx-2">
+        <nav className={`flex flex-wrap
+          ${active ? "" : "border-b"}
           items-center
           justify-between
           w-full
@@ -24,7 +25,7 @@ function Header() {
           md:py-0
           px-4
           text-lg text-700
-        ">
+        `}>
           <div>
             <a href="#">
               <AiFillHome onClick={() => router.push('/')} className="float-left inline-block" />
@@ -34,7 +35,7 @@ function Header() {
             <AiOutlineMenu className={`float-right h-6 w-6 cursor-pointer md:hidden block`} />
           </a>
           <div className={`${active ? "block" : "hidden"} w-full md:flex md:items-center md:w-auto`}>
-            <ul className="text-base pt-4 md:flex md:place-content-end md:pt-0">
+            <ul className={`${active ? "divide-y-2" : ""} text-base pt-4 md:flex md:place-content-end md:pt-0`}>
               {
                 ["about", "portfolio", "blog", "contact"]
                   .map((to, index) => <li key={index}><Link className="transition-all duration-500 ease-in-out py-2 block md: p-4 hover:text-lg" activeClass="active" to={to}>{to.charAt(0).toUpperCase() + to.substring(1)}</Link></li>)

@@ -6,13 +6,20 @@
   --dark-purple: #180718;
   --light-purple: #E3DFFF;
   --light-yellow: #FDF5BF;
+  --light-orange: #FF9A2F;
 }
 
-  body{
-  background-color: var(--light-yellow);
-  color: var(--dark-purple);
+body{
+  background-color: var(--dark-purple);
+  color: var(--light-yellow);
 }
 
 a:hover{
   cursor:pointer;
+}
+
+h1 {
+  font-size: 8rem;
+  font-weight:700;
+  text-shadow: -10px 5px var(--light-orange)
 }

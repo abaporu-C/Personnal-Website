@@ -4,7 +4,6 @@ function Footer() {
   return (
     <>
       <footer>
-        <p>Hello, There!</p>
       </footer>
     </>
   )

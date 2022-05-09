@@ -1,6 +1,12 @@
+import { Element } from 'react-scroll'
+
 function HomePage() {
   return (
-    <div>Welcome to Next.js!</div>
+    <>
+      <section className="align-middle text-center">
+        <h1>Hello</h1>
+      </section>
+    </>
   )
 }
 
