@@ -28,7 +28,7 @@ function Header() {
         `}>
           <div>
             <a href="#">
-              <AiFillHome onClick={() => router.push('/')} className="float-left inline-block" />
+              <AiFillHome onClick={() => router.push('/')} className="cursor-pointer float-left inline-block" />
             </a>
           </div>
           <a href="#" onClick={MenuToggle}>
@@ -38,7 +38,7 @@ function Header() {
             <ul className={`${active ? "divide-y-2" : ""} text-base pt-4 md:flex md:place-content-end md:pt-0`}>
               {
                 ["about", "portfolio", "blog", "contact"]
-                  .map((to, index) => <li key={index}><Link className="transition-all duration-500 ease-in-out py-2 block md: p-4 hover:text-lg" activeClass="active" to={to}>{to.charAt(0).toUpperCase() + to.substring(1)}</Link></li>)
+                  .map((to, index) => <li key={index}><Link className="cursor-pointer transition-all duration-500 ease-in-out py-2 block md: p-4 hover:text-lg" activeClass="active" to={to}>{to.charAt(0).toUpperCase() + to.substring(1)}</Link></li>)
               }
             </ul>
           </div>

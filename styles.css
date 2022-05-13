@@ -14,12 +14,7 @@ body{
   color: var(--light-yellow);
 }
 
-a:hover{
-  cursor:pointer;
-}
-
-h1 {
-  font-size: 8rem;
+.shadow-text {
   font-weight:700;
-  text-shadow: -10px 5px var(--light-orange)
+  text-shadow: -7px 3px var(--light-orange)
 }
