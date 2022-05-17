@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <>
-      <header className="mx-2">
+      <header className="z-10 mx-2">
         <nav className={`flex flex-wrap
           ${active ? "" : "border-b"}
           items-center

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root{
+  --header-height: 41px;
   --dark-purple: #180718;
   --light-purple: #E3DFFF;
   --light-yellow: #FDF5BF;
@@ -17,4 +18,21 @@ body{
 .shadow-text {
   font-weight:700;
   text-shadow: -7px 3px var(--light-orange)
+}
+
+.vertical-text{
+  writing-mode: vertical-rl;
+}
+
+.widget-wrapper{
+  height: calc(100vh - var(--header-height));
+}
+
+.widget::after{
+  background-color: var(--light-yellow);
+  content: "";
+  display: block;
+  height: 180px;
+  margin: 0 auto;
+  width: 1px;
 }
